@@ -1,7 +1,7 @@
 import os
 from pymilvus import connections, FieldSchema, CollectionSchema, DataType, Collection, utility
-from dotenv import load_dotenv
-load_dotenv()
+
+
 
 def init_vectordb():
     HOST = 'localhost'
