@@ -44,22 +44,6 @@ sc = spark.sparkContext
 sc.setLogLevel('ERROR')
 
 
-
-
-def get_image(image_URL):
-  if image_URL:
-    try:
-      response = requests.get(image_URL)
-      image = Image.open(BytesIO(response.content)).convert("RGB")
-      width, height = image.size
-      if width == 1 and height == 1:
-        return None
-      return image
-    except:
-      print(f"Error: {image_URL}")
-      return None
-    return None
-
 def get_image_url(image_id):
   if image_id:
     return f'https://covers.openlibrary.org/b/isbn/{image_id}.jpg'
