@@ -130,3 +130,9 @@ if __name__ == '__main__':
   df_str_embeddings = df_str_embeddings.drop("image_embedding")
   
   df_str_embeddings.write.csv("s3://semantic-book-search/job_results/book_covers_with_embeddings_full_set", header=True)
+
+  # collection_name = 'book_covers_collection'
+  # collection = Collection(collection_name)
+  # df_str_embeddings = df_str_embeddings.select("isbn_single", "title", "image_embeddings")
+  # collection.insert(df_str_embeddings.toPandas())
+  # collection.flush()
