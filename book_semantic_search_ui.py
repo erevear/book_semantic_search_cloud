@@ -135,7 +135,7 @@ def main():
     )
     # Button to trigger the display of images
     if (input_text and submit_search) or example_one or example_two or example_three:
-        df = pd.read_pickle('image_embeddings.pkl')
+        df = pd.read_pickle('https://public007-v5.s3.us-west-2.amazonaws.com/image_embeddings.pkl')
         returned_books = []
         # Display five placeholder images in a horizontal row using columns
         if example_one:
